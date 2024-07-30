@@ -90,15 +90,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
         />
       </div>
     ),
-    [
-      state.dropdownPosition,
-      state.isSearchFieldVisible,
-      state.searchTerm,
-      searchable,
-      handleSearchChange,
-      handleKeyDown,
-      dispatch,
-    ]
+    [state, label, inputContainerRef, inputRef, dropdownRef, optionRefs, handleSearchChange, handleOptionClick, handleRemoveOption, handleKeyDown, dispatch, searchable, usePortal]
   );
 
   return (

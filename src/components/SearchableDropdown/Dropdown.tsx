@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/role-has-required-aria-props */
 import React, { useMemo } from "react";
 import { FaTimes, FaSearch } from "react-icons/fa";
 import { IoMdCloseCircle } from "react-icons/io";
@@ -87,14 +88,7 @@ const Dropdown: React.FC<DropdownProps> = ({
         )}
       </ul>
     ),
-    [
-      state.filteredOptions,
-      state.selectedOptions,
-      state.highlightedIndex,
-      state.searchTerm,
-      handleOptionClick,
-      highlightText,
-    ]
+    [dropdownRef, state.filteredOptions, state.selectedOptions, state.highlightedIndex, state.searchTerm, optionRefs, handleOptionClick]
   );
 
   const DropdownComponent = (
